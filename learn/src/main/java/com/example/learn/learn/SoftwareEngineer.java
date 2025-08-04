@@ -41,14 +41,14 @@ public class SoftwareEngineer {
     };
 
     @Override
-    public boolean equals(Objects o){
-        if(o == null || getClass() != o.getClass()) return false;
-        SoftwareEngineer that= (SoftwareEngineer) o;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        SoftwareEngineer that = (SoftwareEngineer) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(skills, that.skills);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return Objects.hash(id, name, skills);
     }
 }
