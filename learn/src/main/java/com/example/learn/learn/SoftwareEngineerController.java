@@ -1,17 +1,16 @@
 package com.example.learn.learn;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("software-engineers")
 public class SoftwareEngineerController {
 
-    @GetMapping("all-engineers")
+    @GetMapping
     public List<SoftwareEngineer> getEngineers(){
         return List.of(
                 new SoftwareEngineer(
