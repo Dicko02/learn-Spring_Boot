@@ -12,10 +12,10 @@ public class LearnApplication {
 	@RequestMapping("/")
 	String helloWorld() {
 		return "Hello World!";
-	}
+	};
 
 	public static void main(String[] args) {
 		SpringApplication.run(LearnApplication.class, args);
-	}
+	};
 
 }

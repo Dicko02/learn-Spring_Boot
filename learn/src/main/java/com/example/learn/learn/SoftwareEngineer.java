@@ -3,7 +3,16 @@ package com.example.learn.learn;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class SoftwareEngineer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private List<String> skills;
@@ -45,10 +54,10 @@ public class SoftwareEngineer {
         if (o == null || getClass() != o.getClass()) return false;
         SoftwareEngineer that = (SoftwareEngineer) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(skills, that.skills);
-    }
+    };
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name, skills);
-    }
+    };
 }
